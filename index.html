@@ -1,142 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Gilded Age: A Cycle of Conflict</title>
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Basic styles for clarity and structure, since we can't run a full Tailwind build */
-        body {
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            line-height: 1.5;
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        .container {
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 2rem;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        .relationship-table th, .relationship-table td {
-            padding: 0.5rem;
-            border: 1px solid #e5e7eb; /* gray-200 */
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      .flow-arrow {
+        position: relative;
+        font-size: 2.5rem;
+        color: #6366f1; /* indigo-500 */
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
         }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
     </style>
-    </head>
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-white shadow-md border-b border-gray-200 sticky top-0 z-10">
-        <div class="container py-4">
-            <h1 class="text-3xl font-bold text-gray-900">The Gilded Age: A Cycle of Conflict</h1>
-            <p class="text-lg text-gray-600">Industrial Growth, Social Division, and Organized Resistance</p>
-        </div>
+  </head>
+  <body class="bg-gray-900 text-gray-200 antialiased">
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-20">
+      <div class="container mx-auto px-6 py-4">
+        <h1 class="text-4xl font-extrabold text-white tracking-wider">
+          The Gilded Age: A Cycle of Conflict
+        </h1>
+        <p class="text-lg text-indigo-300">
+          Industrial Growth, Social Division, and Organized Resistance
+        </p>
+      </div>
     </header>
 
-    <main class="container">
-        <section class="my-10 p-6 bg-white rounded-xl shadow-lg">
-            <p class="text-lg leading-relaxed text-gray-700">
-                The Gilded Age was an era of rapid industrial growth and immense wealth for a few, which simultaneously created profound social and economic divisions. The three topics—<strong class="text-indigo-600">Immigration</strong>, <strong class="text-indigo-600">Captains of Industry/Robber Barons</strong>, and <strong class="text-indigo-600">Labor Unions, Strikes, and the Populist Party</strong>—are intrinsically linked, forming a powerful cause-and-effect cycle that defined the period.
+    <main class="container mx-auto px-6 py-12">
+      <section class="my-12 fade-in">
+        <p
+          class="text-xl leading-relaxed text-center max-w-4xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-2xl"
+        >
+          The Gilded Age was an era of explosive industrial growth and immense
+          wealth for a few, which simultaneously created profound social and
+          economic divisions. The three topics—<strong class="text-indigo-400"
+            >Immigration</strong
+          >,
+          <strong class="text-indigo-400"
+            >Captains of Industry/Robber Barons</strong
+          >, and
+          <strong class="text-indigo-400">Labor Unions & Populism</strong>—are
+          intrinsically linked, forming a powerful cause-and-effect cycle that
+          defined the period.
+        </p>
+      </section>
+
+      <section class="my-20 fade-in" style="animation-delay: 0.2s">
+        <h2 class="text-3xl font-bold text-center mb-12 text-white">
+          The Cycle of Influence
+        </h2>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center text-center gap-8"
+        >
+          <div
+            class="bg-gray-800 p-6 rounded-xl shadow-lg w-64 h-40 flex items-center justify-center"
+          >
+            <h3 class="text-xl font-semibold text-amber-400">
+              Captains of Industry
+            </h3>
+          </div>
+
+          <div class="flow-arrow transform md:-rotate-0">➔</div>
+
+          <div
+            class="bg-gray-800 p-6 rounded-xl shadow-lg w-64 h-40 flex items-center justify-center"
+          >
+            <h3 class="text-xl font-semibold text-emerald-400">
+              Mass Immigration
+            </h3>
+          </div>
+
+          <div class="flow-arrow transform rotate-90 md:rotate-0">➔</div>
+
+          <div
+            class="bg-gray-800 p-6 rounded-xl shadow-lg w-64 h-40 flex items-center justify-center"
+          >
+            <h3 class="text-xl font-semibold text-sky-400">
+              Labor Unions & Populist Party
+            </h3>
+          </div>
+        </div>
+        <div class="flex justify-center mt-8">
+          <div class="flow-arrow transform -rotate-90 md:rotate-180">➔</div>
+        </div>
+        <div class="text-center text-lg text-indigo-300 mt-4">
+          And the cycle repeats...
+        </div>
+      </section>
+
+      <hr class="my-16 border-gray-700" />
+
+      <section class="my-12 fade-in" style="animation-delay: 0.4s">
+        <h2 class="text-3xl font-bold mb-8 text-center text-white">
+          How They Influenced Each Other
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-800 p-8 rounded-2xl shadow-xl border-t-4 border-amber-500 transform hover:scale-105 transition-transform duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-amber-400">
+              Robber Barons & Immigration
+            </h3>
+            <p class="text-gray-300">
+              <strong class="text-amber-500">Influence:</strong> Industrial
+              expansion created a massive demand for cheap, unskilled labor,
+              pulling in waves of immigrants.
             </p>
-        </section>
-
-        <section class="my-10">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b pb-2">Relationship Cycle in the Gilded Age</h2>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left relationship-table bg-white rounded-lg shadow-md">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="py-3 px-4 font-medium text-gray-700">Relationship Cycle in the Gilded Age</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Captains of Industry had effect  Immigration</td></tr>
-                        <tr><td>Immigration had an effect Labor Unions</td></tr>
-                        <tr><td>Labor Unions had an effect Robber Barons/Populist Party</td></tr>
-                        <tr><td>Robber Barons had an effect  Labor Populist Party</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <hr class="my-10 border-gray-200" />
-
-        <section class="my-10">
-            <h2 class="text-3xl font-bold mb-6 text-indigo-700">How These Groups and Movements Influenced One Another</h2>
-            
-            <div class="mb-8 p-6 bg-white rounded-xl shadow-lg border-l-4 border-amber-500">
-                <h3 class="text-xl font-semibold mb-3 text-gray-900">1. Robber Barons and Immigration 🏭🌍</h3>
-                
-                <div class="mb-4">
-                    <strong class="block text-lg text-amber-600">Influence:</strong>
-                    <p class="pl-4 border-l-2 border-gray-200 text-gray-700">The massive industrial expansion led by <strong>Robber Barons</strong> (like Carnegie and Rockefeller) created an enormous, insatiable demand for <strong>unskilled labor</strong> in factories, mines, and railroads. This demand was the primary <strong>pull factor</strong> that spurred the massive wave of immigration from Southern and Eastern Europe, as well as Asia.</p>
-                </div>
-
-                <div>
-                    <strong class="block text-lg text-amber-600">Impact on Goals:</strong>
-                    <p class="pl-4 border-l-2 border-gray-200 text-gray-700">This influx strengthened the goals of the <strong>Robber Barons</strong> by providing a constant, inexpensive, and easily replaceable workforce. Immigrants, desperate for work and often unfamiliar with English or American customs, were willing to accept long hours, low wages, and dangerous conditions, maximizing the industrialists' profits.</p>
-                </div>
-            </div>
-
-            <div class="mb-8 p-6 bg-white rounded-xl shadow-lg border-l-4 border-emerald-500">
-                <h3 class="text-xl font-semibold mb-3 text-gray-900">2. Immigration and Labor Unions 🌍  ✊</h3>
-                
-                <div class="mb-4">
-                    <strong class="block text-lg text-emerald-600">Influence:</strong>
-                    <p class="pl-4 border-l-2 border-gray-200 text-gray-700">The swelling population of new <strong>immigrants</strong> greatly complicated the efforts of **labor unions**. The sheer number of workers, combined with the fact that they were often divided by language, culture, and ethnicity, made it difficult to organize them into a unified front.</p>
-                </div>
-
-                <div>
-                    <strong class="block text-lg text-emerald-600">Impact on Goals:</strong>
-                    <p class="pl-4 border-l-2 border-gray-200 text-gray-700"><strong>Immigration</strong> often weakened the goals of established <strong>labor unions</strong>. Industrialists frequently used recent immigrants as <strong>scabs</strong> (strikebreakers) to replace striking native-born or long-established workers, thereby crushing strikes and suppressing wages for everyone. This led to tension and sometimes outright hostility between unionized workers and the newer immigrants.</p>
-                </div>
-            </div>
-
-            <div class="mb-8 p-6 bg-white rounded-xl shadow-lg border-l-4 border-sky-500">
-                <h3 class="text-xl font-semibold mb-3 text-gray-900">3. Robber Barons, Labor Unions, and the Populist Party 🏭  ✊ / 🌾</h3>
-                
-                <div class="mb-4">
-                    <strong class="block text-lg text-sky-600">Influence:</strong>
-                    <p class="pl-4 border-l-2 border-gray-200 text-gray-700">The immense power and wealth concentration of the <strong>Robber Barons</strong>, coupled with their anti-union tactics and exploitation of workers, directly spurred the growth of **labor unions** and political resistance like the **Populist Party**.</p>
-                    <ul class="list-disc list-inside mt-2 pl-4 text-gray-700">
-                        <li><strong class="font-medium">Labor Unions</strong> (Knights of Labor, AFL) were a direct response to the low wages, dangerous conditions, and lack of worker power.</li>
-                        <li><strong class="font-medium">The Populist Party</strong> (farmers/laborers) arose from shared outrage against corporate power, particularly high freight rates charged by **railroad trusts** (controlled by Robber Barons).</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <strong class="block text-lg text-sky-600">Impact on Goals:</strong>
-                    <p class="pl-4 border-l-2 border-gray-200 text-gray-700">The <strong>Robber Barons'</strong> actions unintentionally strengthened the resolve and numbers of **labor unions** and the **Populists** by giving them a clear, powerful enemy. Conversely, the unions and Populists weakened the industrialists' goals by challenging their absolute power through strikes, political agitation, and demanding government regulation (e.g., the nationalization of railroads).</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="my-10 border-gray-200" />
-
-        <section class="my-10 p-8 bg-indigo-50 rounded-xl shadow-2xl">
-            <h2 class="text-3xl font-bold mb-6 text-indigo-800">Shaping and Fueling the Gilded Age: The Core Conflict</h2>
-            <div class="space-y-4 text-lg text-indigo-700">
-                <p>
-                    <strong class="font-extrabold text-indigo-900">Industrial Engine:</strong> Robber Barons and their industries created the engine of the Gilded Age's wealth and economic growth.
-                </p>
-                <p>
-                    <strong class="font-extrabold text-indigo-900">Labor Supply and Exploitation:</strong> Immigration provided the massive, cheap, and easily exploited labor pool necessary to run that engine at a staggering profit, driving the period's economic disparity.
-                </p>
-                <p>
-                    <strong class="font-extrabold text-indigo-900">The Response to Inequality:</strong> Labor Unions and the Populist Party represented the major organized opposition to the social and economic consequences of that system. They were the primary forces pushing back against unchecked corporate power and demanding a fairer distribution of the nation's new wealth.
-                </p>
-            </div>
-            <p class="mt-6 pt-4 border-t border-indigo-200 text-xl font-medium text-indigo-900">
-                The tension between the profit-driven industrialists (fueled by cheap immigrant labor) and the organized resistance of the workers and farmers (the unions and Populists) is the <strong class="underline">central conflict of the Gilded Age</strong>. This conflict ultimately paved the way for the Progressive Era reforms that would follow.
+            <p class="mt-4 text-gray-300">
+              <strong class="text-amber-500">Impact:</strong> This supplied the
+              Robber Barons with a large, exploitable workforce, maximizing
+              their profits.
             </p>
-        </section>
+          </div>
 
+          <div
+            class="bg-gray-800 p-8 rounded-2xl shadow-xl border-t-4 border-emerald-500 transform hover:scale-105 transition-transform duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-emerald-400">
+              Immigration & Labor Unions
+            </h3>
+            <p class="text-gray-300">
+              <strong class="text-emerald-500">Influence:</strong> The huge
+              influx of diverse immigrants made it difficult for unions to
+              organize a unified front.
+            </p>
+            <p class="mt-4 text-gray-300">
+              <strong class="text-emerald-500">Impact:</strong> Industrialists
+              used immigrants as strikebreakers, weakening the power of unions
+              and suppressing wages for all.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-800 p-8 rounded-2xl shadow-xl border-t-4 border-sky-500 transform hover:scale-105 transition-transform duration-300"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-sky-400">
+              Unions, Populists & Robber Barons
+            </h3>
+            <p class="text-gray-300">
+              <strong class="text-sky-500">Influence:</strong> The exploitation
+              by Robber Barons directly fueled the rise of labor unions and the
+              Populist Party as a form of resistance.
+            </p>
+            <p class="mt-4 text-gray-300">
+              <strong class="text-sky-500">Impact:</strong> These groups
+              challenged the industrialists' power through strikes and political
+              demands for regulation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-16 border-gray-700" />
+
+      <section
+        class="my-12 p-10 bg-indigo-900/30 rounded-2xl shadow-2xl text-center fade-in"
+        style="animation-delay: 0.6s"
+      >
+        <h2 class="text-3xl font-bold mb-6 text-indigo-300">
+          The Core Conflict of the Gilded Age
+        </h2>
+        <p class="text-xl max-w-4xl mx-auto text-indigo-200">
+          The tension between the profit-driven industrialists, fueled by cheap
+          immigrant labor, and the organized resistance from workers and
+          farmers, formed the central conflict of the era. This struggle paved
+          the way for the
+          <strong
+            class="font-extrabold text-white underline decoration-wavy decoration-indigo-400"
+            >Progressive Era reforms</strong
+          >
+          that would follow.
+        </p>
+      </section>
     </main>
 
-    <footer class="bg-gray-800 text-white mt-10">
-        <div class="container py-6 text-center text-sm">
-            Website content based on user-provided historical analysis.
-        </div>
+    <footer class="bg-gray-800 mt-16">
+      <div
+        class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm"
+      >
+        Website content based on user-provided historical analysis.
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
 
